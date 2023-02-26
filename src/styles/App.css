@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 18px;
+  }
+  
+  .chart {
+    max-width: 100vw;
+    overflow: clip hidden;
+  }
+  
+  select {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+  }
+  
+  select:focus-visible {
+    outline: none;
+  }
+  
+  option {
+    padding: 10px 20px;
+    background-color: white;
+  }
+  
+  h2 {
+    margin-top: 12px;
+    margin-bottom: 11px;
+  }
+  
+  p {
+    margin-top: 1px;
+    margin-bottom: 12px;
+  }
+  
+  .label {
+    font-size: 18px;
+    margin-left: 10px;
+    padding-bottom: 12px;
+  }
+  
+  .check {
+    position: relative;
+    display: flex;
+    align-items: start;
+  }
+  
+  input[type='checkbox'] {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #008000;
+    background-color: #fff;
+    outline: none;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  input[type='checkbox']:checked {
+    background-color: #008000;
+  }
+  
+  input[type='checkbox']::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #008000;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s;
+  }
+  
+  input[type='checkbox']:checked::before {
+    transform: translateX(20px);
+    background-color: #fff;
+  }
+  
+  .welcome-text {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    animation: welcome-animation 2s ease-out forwards;
+  }
+  
+  .loading {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: #008000;
+  }
+  
+  @keyframes welcome-animation {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(100%);
+      opacity: 1;
+    }
+  }
+  
