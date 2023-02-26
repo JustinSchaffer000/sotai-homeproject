@@ -36,7 +36,7 @@ export function App() {
 
   const call = async (year = '2017') => {
     try {
-      const res = await fetch(`http://localhost:8000/data/${year}/`);
+      const res = await fetch(`http://52.87.152.189:8000/data/${year}/`);
       const data = await res.json();
       setData(data.data);
 
