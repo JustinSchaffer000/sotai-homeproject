@@ -15,7 +15,7 @@ export default function Login({ setIsLoggedIn }: Props) {
 
   const submit = async (type = 'login') => {
     try {
-      const res = await fetch(`http://localhost:8000/${type}/`, {
+      const res = await fetch(`http://52.87.152.189:8000/${type}/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
